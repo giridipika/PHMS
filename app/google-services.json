@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "653165460646",
+    "firebase_url": "https://phms-17fb6-default-rtdb.firebaseio.com",
+    "project_id": "phms-17fb6",
+    "storage_bucket": "phms-17fb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653165460646:android:20fe5382058513bb614867",
+        "android_client_info": {
+          "package_name": "com.example.phms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653165460646-nuklhms8jpnpgauo7a3a346jb74karsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYlPWB4hmBimduiqZBtlnkpIPZ-95xmi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653165460646-nuklhms8jpnpgauo7a3a346jb74karsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

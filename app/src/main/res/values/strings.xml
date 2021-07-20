@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PHMS</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_to_phms_sign_up_here">New to PHMS? Sign Up here</string>
+    <string name="sign_in">Sign In</string>
+    <string name="signupemail">Email</string>
+    <string name="signuppassword">Password</string>
+    <string name="already_have_an_account_sign_up_here">Already have an account? Sign Up here</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
