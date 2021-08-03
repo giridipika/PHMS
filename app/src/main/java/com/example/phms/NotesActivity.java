@@ -1,9 +1,7 @@
 package com.example.phms;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.collection.CircularArray;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -11,7 +9,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,9 +20,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class NotesActivity extends AppCompatActivity {
-    static ArrayList<String> notes = new ArrayList<>();
-    static  ArrayAdapter arrayAdapter;
+   public class NotesActivity extends AppCompatActivity {
+   public static ArrayList<String> notes = new ArrayList<>();
+   public static  ArrayAdapter arrayAdapter;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,10 +57,10 @@ public class NotesActivity extends AppCompatActivity {
         if ( set == null){
             notes.add("Example notes");
         } else {
-            notes = new ArrayList(set);
+            notes = new ArrayList<>(set);
         }
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, notes);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -80,8 +77,7 @@ public class NotesActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int i, long l) {
 
-                final int itemToDelete = i;
-                new AlertDialog.Builder(NotesActivity.this)
+                AlertDialog show = new AlertDialog.Builder(NotesActivity.this)
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setTitle("Are you sure?")
                         .setMessage("Do you want to delete this note?")
