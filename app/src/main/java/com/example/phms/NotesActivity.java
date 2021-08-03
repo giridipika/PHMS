@@ -60,14 +60,14 @@ import java.util.HashSet;
             notes = new ArrayList<>(set);
         }
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
+        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
                 Intent intent = new Intent(getApplicationContext(), com.example.phms.NotesEditor.class);
-                intent.putExtra("noteID",i);
+                intent.putExtra("noteId",i);
                 startActivity(intent);
 
             }
@@ -76,14 +76,14 @@ import java.util.HashSet;
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int i, long l) {
-
+                     final int todelete;
                 AlertDialog show = new AlertDialog.Builder(NotesActivity.this)
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setTitle("Are you sure?")
                         .setMessage("Do you want to delete this note?")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                     @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                    public void onClick(DialogInterface dialogInterface, int todelete ) {
                                         notes.remove(i);
                                         arrayAdapter.notifyDataSetChanged();
                                         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.notes", Context.MODE_PRIVATE);
