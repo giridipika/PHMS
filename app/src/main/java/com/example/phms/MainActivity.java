@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.phms.ui.login.SignUpActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -42,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
         btnHome.setOnClickListener(v-> {
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
+        });
+
+        tvSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(i);
+            }
         });
     }
 }

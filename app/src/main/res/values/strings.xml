@@ -22,4 +22,5 @@
     <string name="exerciseButtonText">exercise</string>
     <string name="notesButtonText">notes</string>
     <string name="dietButtonText">diet</string>
+    <string name="logoutButtonText">logout</string>
 </resources>
