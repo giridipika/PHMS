@@ -17,10 +17,10 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="vitalsButtonText">vitals</string>
-    <string name="medicationButtonText">medication</string>
-    <string name="exerciseButtonText">exercise</string>
-    <string name="notesButtonText">notes</string>
-    <string name="dietButtonText">diet</string>
-    <string name="logoutButtonText">logout</string>
+    <string name="vitalsText">Vitals</string>
+    <string name="medicationText">Medication</string>
+    <string name="exerciseText">Exercise</string>
+    <string name="notesText">Notes</string>
+    <string name="dietText">Diet</string>
+    <string name="logoutButtonText">Logout</string>
 </resources>

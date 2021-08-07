@@ -9,12 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PHMS">
-        <activity android:name=".NotesEditor"></activity>
-        <activity android:name=".DietActivity" />
-        <activity android:name=".ExerciseActivity" />
-        <activity android:name=".NotesActivity" />
-        <activity android:name=".MedicationActivity" />
-        <activity android:name=".VitalActivity" />
+        <activity android:name=".NotesEditor"
+            android:label="@string/notesText"/>
+        <activity android:name=".DietActivity"
+            android:label="@string/dietText"/>
+        <activity android:name=".ExerciseActivity"
+            android:label="@string/exerciseText"/>
+        <activity android:name=".NotesActivity"
+            android:label="@string/notesText"/>
+        <activity android:name=".MedicationActivity"
+            android:label="@string/medicationText"/>
+        <activity android:name=".VitalActivity"
+            android:label="@string/vitalsText"/>
         <activity
             android:name=".ui.login.SignUpActivity"
             android:label="@string/title_activity_sign_up" />

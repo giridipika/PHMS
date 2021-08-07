@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.elevenzon.toolbar.MainActivity">
 
-    <item android:id="@+id/add_note" android:title="Add note"></item>
+    <item
+        android:id="@+id/add_note"
+        android:title="add"
+        android:icon="@drawable/baseline_note_add_24"
+        app:showAsAction="always"
+        />
+
 </menu>
