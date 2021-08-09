@@ -11,7 +11,7 @@
         android:id="@+id/button2"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:background="@drawable/background"
+
         android:text="Sunday"
         app:backgroundTint="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +26,7 @@
         android:id="@+id/button3"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:background="@drawable/background"
+
         android:text="Monday"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +40,7 @@
         android:id="@+id/button4"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:background="@drawable/background"
+
         android:text="Tuesday"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +54,7 @@
         android:id="@+id/button5"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:background="@drawable/background"
+
         android:text="Wednesday"
         app:backgroundTint="@android:color/holo_blue_bright"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,7 +69,7 @@
         android:id="@+id/button6"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:background="@drawable/background"
+
         android:text="Thursday"
         app:backgroundTint="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,7 +84,7 @@
         android:id="@+id/button7"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:background="@drawable/background"
+
         android:text="Friday"
         app:backgroundTint="@android:color/holo_green_light"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,7 +99,7 @@
         android:id="@+id/button8"
         android:layout_width="360dp"
         android:layout_height="60dp"
-        android:background="@drawable/background"
+
         android:text="Saturday"
         app:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"

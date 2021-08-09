@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PHMS">
-        <activity android:name=".sundayActivity"></activity>
+        <activity android:name=".VitalTabsActivity"
+            android:theme="@style/Theme.PHMS.NoActionBar"
+            android:label = "Vitals"/>
         <activity
             android:name=".NotesEditor"
             android:label="@string/notesText" />

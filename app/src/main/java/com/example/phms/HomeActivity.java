@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
 
         btnVital = findViewById(R.id.vitalsButton);
         btnVital.setOnClickListener(v-> {
-            Intent intent = new Intent(this, VitalActivity.class);
+            Intent intent = new Intent(this, VitalTabsActivity.class);
             startActivity(intent);
         });
     }
