@@ -17,12 +17,12 @@ public class ExerciseActivity extends AppCompatActivity {
         abutton = findViewById(R.id.button2);
         bbutton = findViewById(R.id.button9);
 
-        /*abutton.setOnClickListener(v-> {
+        abutton.setOnClickListener(v-> {
             Intent intent = new Intent(this, sundayActivity.class);
             startActivity(intent);
         });
 
-         */
+
 
         bbutton.setOnClickListener(v-> {
             Intent intent = new Intent(this, HomeActivity.class);
