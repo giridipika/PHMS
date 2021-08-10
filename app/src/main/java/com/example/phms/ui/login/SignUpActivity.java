@@ -34,6 +34,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 
+import java.sql.SQLOutput;
+
 public class SignUpActivity extends AppCompatActivity {
     FirebaseAuth mFirebaseAuth;
     TextView SignIn;

@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     // Declare all variable here
     EditText emailID, password;
     Button btnSignIn;
-    Button btnHome;
     TextView tvSignUp;
     String email, pwd;
     private FirebaseAuth userSignIn;
@@ -39,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btnSignIn = findViewById(R.id.SignInButton);
         tvSignUp = findViewById(R.id.textViewSignUp);
 
-        btnHome = findViewById(R.id.homeButton);
-        btnHome.setOnClickListener(v-> {
+        btnSignIn.setOnClickListener(v-> {
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         });
