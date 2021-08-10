@@ -24,6 +24,7 @@ public class sundayActivity extends AppCompatActivity {
     private ArrayAdapter<String> itemsAdapter;
     private ListView listView;
     private Button button;
+    String time = "";
     Button timebutton,abutton;
     int hour, minute;
 
@@ -78,10 +79,18 @@ public class sundayActivity extends AppCompatActivity {
     private void additem() {
         EditText input = findViewById(R.id.editText2);
         String itemText = input.getText().toString();
-
+        String msg="";
         if(!(itemText.equals(""))) {
-            itemsAdapter.add(itemText);
-            input.setText("");
+            if(!(time.equals(""))){
+                msg = time + "   ";
+                msg = msg + input.getText().toString();
+                itemsAdapter.add(msg);
+            }
+            else{
+                Toast.makeText(getApplicationContext(),"please enter select time...", Toast.LENGTH_LONG).show();
+            }
+            //itemsAdapter.add(itemText);
+            //input.setText("");
         }
         else{
             Toast.makeText(getApplicationContext(),"please enter text...", Toast.LENGTH_LONG).show();
@@ -101,6 +110,7 @@ public class sundayActivity extends AppCompatActivity {
                 hour = selectedHour;
                 minute = selectedMinute;
                 timebutton.setText(String.format(Locale.getDefault(),"%02d:%02d",hour,minute));
+                time = String.format(Locale.getDefault(),"%02d:%02d",hour,minute);
 
             }
         };

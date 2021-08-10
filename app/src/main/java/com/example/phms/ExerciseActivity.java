@@ -23,10 +23,11 @@ public class ExerciseActivity extends AppCompatActivity {
         });
 
 
-
         bbutton.setOnClickListener(v-> {
             Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         });
+
+
     }
 }

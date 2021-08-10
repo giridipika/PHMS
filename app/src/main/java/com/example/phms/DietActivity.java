@@ -1,76 +1,79 @@
 package com.example.phms;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-/*import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
- */
 
 public class DietActivity extends AppCompatActivity {
 
-    //LineChart lineChart;
-    //List<Entry> entries = new ArrayList<Entry>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vital);
 
-        /*lineChart = (LineChart) findViewById(R.id.lineChart);
-
-        ArrayList<String> xAXES = new ArrayList<>();
-        ArrayList<Entry> yAXESsin = new ArrayList<>();
-        ArrayList<Entry> yAXEScos = new ArrayList<>();
-        double x = 0 ;
-        int numDataPoints = 1000;
-        for(int i=0;i<numDataPoints;i++){
-            float sinFunction = Float.parseFloat(String.valueOf(Math.sin(x)));
-            float cosFunction = Float.parseFloat(String.valueOf(Math.cos(x)));
-            entries.add(new Entry((float) x,sinFunction));
-            x = x + 0.1;
-            //yAXESsin.add(new Entry(sinFunction,i));
-            //yAXEScos.add(new Entry(cosFunction,i));
-            //xAXES.add(i, String.valueOf(x));
-        }
-        String[] xaxes = new String[xAXES.size()];
-        for(int i=0; i<xAXES.size();i++){
-            xaxes[i] = xAXES.get(i).toString();
-        }
-
-        ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
-
-        LineDataSet lineDataSet1 = new LineDataSet(entries,"sin");
-        lineDataSet1.setDrawCircles(false);
-        lineDataSet1.setColor(Color.BLUE);
-
-        /*LineDataSet lineDataSet1 = new LineDataSet(yAXEScos,"cos");
-        lineDataSet1.setDrawCircles(false);
-        lineDataSet1.setColor(Color.BLUE);
-
-        LineDataSet lineDataSet2 = new LineDataSet(yAXESsin,"sin");
-        lineDataSet2.setDrawCircles(false);
-        lineDataSet2.setColor(Color.RED);
-
-        lineDataSets.add(lineDataSet1);
-        lineDataSets.add(lineDataSet2);
-
-        //new LineData(lineDataSets)
-
-
-        lineDataSets.add(lineDataSet1);
-        lineChart.setData(new LineData(lineDataSets));
-
-        lineChart.setVisibleXRangeMaximum(65f);
-
-         */
-
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        LayoutInflater factory = LayoutInflater.from(this);
+        final View textEntryView = factory.inflate(R.layout.text_entry, null);
+
+        final EditText input1 = new EditText(this);
+        final EditText input2 = new EditText(this);
+
+
+        input1.setText("DefaultValue", TextView.BufferType.EDITABLE);
+        input2.setText("DefaultValue", TextView.BufferType.EDITABLE);
+        //if add note icon is selected open the Notes editor
+        if(item.getItemId() == R.id.add_vital){
+            AlertDialog show = new AlertDialog.Builder(DietActivity.this)
+                    .setTitle("Enter value")
+                    .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i ) {
+                                    Log.i("AlertDialog","TextEntry 1 Entered "+input1.getText().toString());
+                                    Log.i("AlertDialog","TextEntry 2 Entered "+input2.getText().toString());
+                                }
+                            }
+                    )
+                    .setNegativeButton("Cancel", null)
+                    .show();
+
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //set up menu
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.add_vital_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
 }
