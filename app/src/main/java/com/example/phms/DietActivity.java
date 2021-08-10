@@ -39,7 +39,7 @@ public class DietActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
         LayoutInflater factory = LayoutInflater.from(this);
-        final View textEntryView = factory.inflate(R.layout.text_entry, null);
+        //final View textEntryView = factory.inflate(R.layout.text_entry, null);
 
         final EditText input1 = new EditText(this);
         final EditText input2 = new EditText(this);
