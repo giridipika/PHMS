@@ -55,5 +55,10 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
+
+        btnLogout = findViewById(R.id.logoutButton);
+        btnLogout.setOnClickListener(v -> {
+
+        });
     }
 }
