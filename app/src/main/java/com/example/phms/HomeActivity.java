@@ -13,6 +13,7 @@ public class HomeActivity extends AppCompatActivity {
     Button btnExercise;
     Button btnMedication;
     Button btnVital;
+    Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,12 @@ public class HomeActivity extends AppCompatActivity {
         btnVital = findViewById(R.id.vitalsButton);
         btnVital.setOnClickListener(v-> {
             Intent intent = new Intent(this, VitalTabsActivity.class);
+            startActivity(intent);
+        });
+
+        btnLogout = findViewById(R.id.logoutButton);
+        btnLogout.setOnClickListener(v-> {
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
     }
