@@ -17,6 +17,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -31,7 +32,7 @@ public class DietActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vital);
+        setContentView(R.layout.activity_diet);
 
     }
 
@@ -44,6 +45,32 @@ public class DietActivity extends AppCompatActivity {
         final EditText input1 = new EditText(this);
         final EditText input2 = new EditText(this);
 
+        final TextView name = new EditText(this);
+        final TextView calories = new EditText(this);
+
+        name.setText("name of food");
+        calories.setText("calories");
+
+
+        input1.setText(" ");
+        input2.setText(" ");
+        View view = new View(this);
+        LinearLayout layout = new LinearLayout(this);
+
+        LinearLayout horiLayout1 = new LinearLayout(this);
+        LinearLayout horiLayout2 = new LinearLayout(this);
+
+        horiLayout1.addView(name);
+        horiLayout1.addView(input1);
+
+        horiLayout2.addView(calories);
+        horiLayout2.addView(input2);
+
+        layout.addView(horiLayout1);
+        layout.addView(horiLayout2);
+
+        layout.setOrientation(LinearLayout.VERTICAL);
+
 
         input1.setText("DefaultValue", TextView.BufferType.EDITABLE);
         input2.setText("DefaultValue", TextView.BufferType.EDITABLE);
@@ -51,6 +78,7 @@ public class DietActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.add_vital){
             AlertDialog show = new AlertDialog.Builder(DietActivity.this)
                     .setTitle("Enter value")
+                    .setView(layout)
                     .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i ) {
